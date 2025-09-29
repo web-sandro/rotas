@@ -1,0 +1,125 @@
+body {
+  font-family: sans-serif;
+  background: #1e1e1e;
+  color: #f1f1f1;
+}
+
+/* container geral */
+.container {
+  position: relative;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+/* grid padrão */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(100, 15px);
+  grid-template-rows: repeat(100, 15px);
+  gap: 1px;
+  margin: auto;
+}
+
+.cell {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #444;
+  font-size: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  cursor: pointer;
+}
+
+.cell.active {
+  background: limegreen !important;
+}
+
+.cell.trigger {
+  background: rgb(255, 0, 0) !important;
+}
+
+.cell.selected {
+  background: blue;
+  color: white;
+}
+
+/* imagem oculta até iniciar */
+#imageContainer {
+  position: relative;
+  display: none;
+}
+
+#mapImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#lightCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* header estilizado */
+header {
+  background: #2c2c2c;
+  color: #f1f1f1;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+header h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #00d9ff;
+}
+
+.controles,
+.controles-1,
+.controles-2,
+.controles-3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+input, select {
+  padding: 6px 8px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #3c3c3c;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  min-width: 120px;
+}
+
+button {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #00d9ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #00aacc;
+}
